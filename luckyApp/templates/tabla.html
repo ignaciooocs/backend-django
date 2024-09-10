@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Suerte de los Signos Zodiacales{% endblock %}
+{% block conten %}
+<style>
+    table {
+        width: 90%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        margin: 20px 0;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        padding: 12px 15px;
+        text-align: left;
+        border: 1px solid #aaa;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    section {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+    
+    <section>
+        <h1 style="text-align: center;">Suerte de los Signos Zodiacales en Septiembre</h1>
+        <table>
+            <tr>
+                <th>Signo Zodiacal</th>
+                <th>Suerte</th>
+            </tr>
+            {% for signo, suerte in suerte_signos.items %}
+                <tr>
+                    <th>{{ signo }}</th>
+                    <th>{{ suerte }}</th>
+                </tr>
+            {% endfor %}
+        </table>
+    </section>
+{% endblock %}
+
+

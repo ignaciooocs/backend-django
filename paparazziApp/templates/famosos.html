@@ -1,0 +1,12 @@
+{%  extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Famosos{% endblock %}
+
+{% block conten %}
+    <h1>Famosos</h1>
+    <figure style="width: 500px; height: 300px">
+    <img style="width: 100%; height: 100%; object-fit: cover" src="{% static 'thomas-shelby.jpg' %}" />
+    </figure>
+{% endblock %}
